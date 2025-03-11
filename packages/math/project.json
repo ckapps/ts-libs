@@ -13,7 +13,10 @@
         "main": "packages/math/src/index.ts",
         "tsConfig": "packages/math/tsconfig.lib.json",
         "format": ["esm"],
-        "declarationRootDir": "packages/math/src"
+        "declarationRootDir": "packages/math/src",
+        "additionalEntryPoints": [
+          "packages/math/src/lib/geometry/Trigonometry.ts"
+        ]
       }
     }
   }

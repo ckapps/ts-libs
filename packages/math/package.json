@@ -11,6 +11,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "default": "./dist/index.js"
+    },
+    "./geometry/Trigonometry": {
+      "types": "./dist/lib/geometry/Trigonometry.d.ts",
+      "import": "./dist/lib/geometry/Trigonometry.js",
+      "default": "./dist/lib/geometry/Trigonometry.js"
     }
   },
   "files": [

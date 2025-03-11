@@ -1,4 +1,4 @@
-import { sin, cos } from './Trigonometric.js';
+import { sin, cos } from './Trigonometry.js';
 
 describe('geometry/Trigonometric', () => {
 

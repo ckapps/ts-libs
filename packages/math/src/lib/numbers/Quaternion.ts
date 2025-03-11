@@ -2,7 +2,7 @@ import * as Data from 'effect/Data';
 import * as Fn from 'effect/Function';
 import * as Num from 'effect/Number';
 import * as Vector3 from '../algebra/vector3.js';
-import * as Trigonometry from '../geometry/Trigonometric.js';
+import * as Trigonometry from '../geometry/Trigonometry.js';
 import { sumAll } from '../base/sum.js';
 
 // --------------------------------------------------------
