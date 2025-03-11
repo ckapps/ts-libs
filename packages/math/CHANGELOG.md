@@ -1,3 +1,13 @@
+## 0.2.0-next.1 (2025-03-11)
+
+### 🚀 Features
+
+- **math:** additional entry points ([513ff24](https://github.com/ckapps/ts-libs/commit/513ff24))
+
+### ❤️ Thank You
+
+- Chris
+
 ## 0.2.0-next.0 (2025-03-11)
 
 ### 🚀 Features
