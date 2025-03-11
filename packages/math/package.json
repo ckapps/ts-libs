@@ -12,10 +12,35 @@
       "import": "./dist/index.js",
       "default": "./dist/index.js"
     },
+    "./geometry/Circle": {
+      "types": "./dist/lib/geometry/Circle.d.ts",
+      "import": "./dist/lib/geometry/Circle.js",
+      "default": "./dist/lib/geometry/Circle.js"
+    },
+    "./geometry/Cone": {
+      "types": "./dist/lib/geometry/Cone.d.ts",
+      "import": "./dist/lib/geometry/Cone.js",
+      "default": "./dist/lib/geometry/Cone.js"
+    },
+    "./geometry/Cylinder": {
+      "types": "./dist/lib/geometry/Cylinder.d.ts",
+      "import": "./dist/lib/geometry/Cylinder.js",
+      "default": "./dist/lib/geometry/Cylinder.js"
+    },
+    "./geometry/Sphere": {
+      "types": "./dist/lib/geometry/Sphere.d.ts",
+      "import": "./dist/lib/geometry/Sphere.js",
+      "default": "./dist/lib/geometry/Sphere.js"
+    },
     "./geometry/Trigonometry": {
       "types": "./dist/lib/geometry/Trigonometry.d.ts",
       "import": "./dist/lib/geometry/Trigonometry.js",
       "default": "./dist/lib/geometry/Trigonometry.js"
+    },
+    "./numbers/Quaternion": {
+      "types": "./dist/lib/numbers/Quaternion.d.ts",
+      "import": "./dist/lib/numbers/Quaternion.js",
+      "default": "./dist/lib/numbers/Quaternion.js"
     }
   },
   "files": [

@@ -1,6 +1,6 @@
 import * as Sphere from './Sphere.js';
 
-describe('geometry/objects/Sphere', () => {
+describe('geometry/Sphere', () => {
   describe('surface-area', () => {
     it('should return surface area', () => {
       const r = 123;

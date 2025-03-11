@@ -1,6 +1,6 @@
 import * as Cone from './Cone.js';
 
-describe('geometry/objects/Cone', () => {
+describe('geometry/Cone', () => {
   describe('surface-area', () => {
     it('should return surface area', () => {
       const r = 123;

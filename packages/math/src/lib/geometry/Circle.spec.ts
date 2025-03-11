@@ -1,6 +1,6 @@
 import * as Circle from './Circle.js';
 
-describe('geometry/objects/circle', () => {
+describe('geometry/circle', () => {
   describe('area', () => {
     it('should return area', () => {
       const r = 123;

@@ -1,6 +1,6 @@
 import { sin, cos } from './Trigonometry.js';
 
-describe('geometry/Trigonometric', () => {
+describe('geometry/Trigonometry', () => {
 
   describe('sin', () => {
 

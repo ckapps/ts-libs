@@ -1,6 +1,6 @@
 import * as Cylinder from './Cylinder.js';
 
-describe('geometry/objects/Cylinder', () => {
+describe('geometry/Cylinder', () => {
   describe('surface-area', () => {
     it('should return surface area', () => {
       const r = 123;
