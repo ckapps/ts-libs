@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "deploy": "nx release --skip-publish"
+    "deploy": "nx release --skip-publish",
+    "deploy:next": "nx release --skip-publish --preid=next"
   },
   "private": true,
   "dependencies": {
