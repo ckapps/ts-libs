@@ -1,3 +1,13 @@
+## 0.2.0-next.3 (2025-03-11)
+
+### 🚀 Features
+
+- **math:** type safe algebraic shapes ([c17a8e4](https://github.com/ckapps/ts-libs/commit/c17a8e4))
+
+### ❤️ Thank You
+
+- Chris
+
 ## 0.2.0-next.2 (2025-03-11)
 
 ### 🚀 Features
