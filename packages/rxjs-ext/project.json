@@ -1,0 +1,20 @@
+{
+  "name": "rxjs-ext",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/rxjs-ext/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "packages/rxjs-ext/dist",
+        "main": "packages/rxjs-ext/src/index.ts",
+        "tsConfig": "packages/rxjs-ext/tsconfig.lib.json",
+        "format": ["esm", "cjs"],
+        "declarationRootDir": "packages/rxjs-ext/src"
+      }
+    }
+  }
+}

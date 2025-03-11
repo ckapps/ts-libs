@@ -5,6 +5,9 @@
   "references": [
     {
       "path": "./packages/math"
+    },
+    {
+      "path": "./packages/rxjs-ext"
     }
   ]
 }
