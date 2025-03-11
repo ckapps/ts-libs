@@ -8,6 +8,9 @@
     },
     {
       "path": "./packages/rxjs-ext"
+    },
+    {
+      "path": "./packages/electron-ext"
     }
   ]
 }

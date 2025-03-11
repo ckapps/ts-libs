@@ -1,0 +1,20 @@
+{
+  "name": "electron-ext",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/electron-ext/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "packages/electron-ext/dist",
+        "main": "packages/electron-ext/src/index.ts",
+        "tsConfig": "packages/electron-ext/tsconfig.lib.json",
+        "format": ["cjs"],
+        "declarationRootDir": "packages/electron-ext/src"
+      }
+    }
+  }
+}
