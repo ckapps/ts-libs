@@ -1,3 +1,13 @@
+## 0.2.0-next.2 (2025-03-11)
+
+### 🚀 Features
+
+- **math:** entry point for euclidean plane ([1681081](https://github.com/ckapps/ts-libs/commit/1681081))
+
+### ❤️ Thank You
+
+- Chris
+
 ## 0.2.0-next.1 (2025-03-11)
 
 ### 🚀 Features
