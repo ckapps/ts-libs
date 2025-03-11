@@ -4,6 +4,6 @@
  * @returns
  * The product of the given `numbers`
  */
-export function multiply(...numbers: number[]) {
+export function multiplyAll(numbers: readonly number[]): number {
   return numbers.reduce((acc, cur) => (acc *= cur), 1);
 }

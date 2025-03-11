@@ -1,7 +1,6 @@
+import { multiplyAll } from '../../base/index.js';
 import { sumAll } from '../../base/sum.js';
 import { map } from '../../fn/array/index.js';
-import {  multiply } from '../../fn/base/index.js';
-
 import { vectorNr } from './vector.types.js';
 
 /**
@@ -15,7 +14,7 @@ import { vectorNr } from './vector.types.js';
  * The dot product of `a` and `b`.
  */
 export function dot(a: vectorNr, b: vectorNr): number {
-  return sumAll(map(multiply)([a, b]));
+  return sumAll(map(multiplyAll)([a, b]));
 }
 
 /**

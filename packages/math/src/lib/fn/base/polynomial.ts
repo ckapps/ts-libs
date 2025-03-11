@@ -7,6 +7,6 @@ import { MonoOperatorFunction } from '../types/operator-function.js';
  *
  * @param a The coefficients for the polynom
  */
-export function polynomial(a: number[]): MonoOperatorFunction<number> {
+export function polynomial(a: readonly number[]): MonoOperatorFunction<number> {
   return v => a.reduce((acc, cur, i) => acc + cur * Math.pow(v, i), 0);
 }

@@ -1,4 +1,4 @@
-import { scale, scaleBy } from './scale';
+import { scale, scaleBy } from './scale.js';
 
 type Vector = number[];
 

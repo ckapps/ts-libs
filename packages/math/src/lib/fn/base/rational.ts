@@ -1,7 +1,7 @@
-import { flow } from 'effect/Function';
-import { expand } from '../flow/index.js';
-import { polynomial } from './polynomial.js';
+import * as Arr from 'effect/Array';
+import * as Fn from 'effect/Function';
 import { divideAll } from '../../base/divide.js';
+import { polynomial } from './polynomial.js';
 
 /**
  * Creates a function that is represented as the quotient
@@ -11,11 +11,34 @@ import { divideAll } from '../../base/divide.js';
  * @param pc Coefficients of `P`
  * @param qc Coefficients of `Q`
  */
-export function rational(pc: number[], qc: number[]) {
-  return flow(
-    // First
-    expand(polynomial(pc), polynomial(qc)),
-    // Then
-    divideAll,
-  );
-}
+export const rational: {
+  (opts: {
+    /** Coefficients of `P`. */
+    polynomial: readonly number[];
+    /** Coefficients of `Q`. */
+    quotient: readonly number[];
+  }): (value: number) => number;
+  (
+    value: number,
+    opts: {
+      /** Coefficients of `P`. */
+      polynomial: readonly number[];
+      /** Coefficients of `Q`. */
+      quotient: readonly number[];
+    }
+  ): number;
+} = Fn.dual(
+  2,
+  (
+    value: number,
+    {
+      polynomial: pc,
+      quotient,
+    }: { polynomial: readonly number[]; quotient: readonly number[] }
+  ): number =>
+    Fn.pipe(
+      [polynomial(pc), polynomial(quotient)] as const,
+      Arr.map(Fn.apply(value)),
+      divideAll
+    )
+);
