@@ -1,11 +1,13 @@
 import * as Cone from './Cone.js';
 
-describe('geometry/Cone', () => {
+describe('geometry/algebraic/Cone', () => {
+  const r = 123;
+  const h = 321;
+  const cone = Cone.Cone({ radius: r, height: h });
+
   describe('surface-area', () => {
     it('should return surface area', () => {
-      const r = 123;
-      const h = 321;
-      expect(Cone.surfaceArea(r, h)).toBe(
+      expect(Cone.surfaceArea(cone)).toBe(
         Math.PI * r * Math.sqrt(Math.pow(r, 2) + Math.pow(h, 2))
       );
     });
@@ -13,9 +15,7 @@ describe('geometry/Cone', () => {
 
   describe('volume', () => {
     it('should return volume', () => {
-      const r = 123;
-      const h = 321;
-      expect(Cone.volume(r, h)).toBe((Math.PI / 3) * h * Math.pow(r, 2));
+      expect(Cone.volume(cone)).toBe((Math.PI / 3) * h * Math.pow(r, 2));
     });
   });
 });

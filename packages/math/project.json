@@ -15,12 +15,12 @@
         "format": ["esm"],
         "declarationRootDir": "packages/math/src",
         "additionalEntryPoints": [
-          "packages/math/src/lib/geometry/Circle.ts",
-          "packages/math/src/lib/geometry/Cone.ts",
-          "packages/math/src/lib/geometry/Cylinder.ts",
-          "packages/math/src/lib/geometry/Sphere.ts",
-          "packages/math/src/lib/geometry/Trigonometry.ts",
+          "packages/math/src/lib/geometry/algebraic/Circle.ts",
+          "packages/math/src/lib/geometry/algebraic/Cone.ts",
+          "packages/math/src/lib/geometry/algebraic/Cylinder.ts",
+          "packages/math/src/lib/geometry/algebraic/Sphere.ts",
           "packages/math/src/lib/geometry/euclidean/Plane.ts",
+          "packages/math/src/lib/geometry/Trigonometry.ts",
           "packages/math/src/lib/numbers/Quaternion.ts"
         ]
       }
