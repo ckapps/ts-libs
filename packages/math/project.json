@@ -1,0 +1,20 @@
+{
+  "name": "math",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/math/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "packages/math/dist",
+        "main": "packages/math/src/index.ts",
+        "tsConfig": "packages/math/tsconfig.lib.json",
+        "format": ["esm"],
+        "declarationRootDir": "packages/math/src"
+      }
+    }
+  }
+}
