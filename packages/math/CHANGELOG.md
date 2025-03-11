@@ -1,3 +1,13 @@
+## 0.1.3 (2025-03-11)
+
+### 🩹 Fixes
+
+- **math:** harmonize vector function interfaces ([cd735a9](https://github.com/ckapps/ts-libs/commit/cd735a9))
+
+### ❤️ Thank You
+
+- Chris
+
 ## 0.1.2 (2025-03-11)
 
 ### 🩹 Fixes
