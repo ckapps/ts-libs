@@ -1,3 +1,13 @@
+## 0.2.0-next.0 (2025-03-11)
+
+### 🚀 Features
+
+- **math:** additional entry point Trigonometry ([c305500](https://github.com/ckapps/ts-libs/commit/c305500))
+
+### ❤️ Thank You
+
+- Chris
+
 ## 0.1.3 (2025-03-11)
 
 ### 🩹 Fixes
