@@ -1,3 +1,13 @@
+## 0.1.2 (2025-03-11)
+
+### 🩹 Fixes
+
+- **math:** combine geometry functions into single modules ([f62fb54](https://github.com/ckapps/ts-libs/commit/f62fb54))
+
+### ❤️ Thank You
+
+- Chris
+
 ## 0.1.1 (2025-03-11)
 
 ### 🩹 Fixes
