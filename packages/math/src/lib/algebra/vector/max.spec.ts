@@ -28,7 +28,7 @@ describe('algebra/vector/max', () => {
   ];
 
   test.each(cases)('should return %p', (expected, vectors) => {
-    const result = max(...vectors);
+    const result = max(vectors);
     expect(result).toEqual(expected);
   });
 });

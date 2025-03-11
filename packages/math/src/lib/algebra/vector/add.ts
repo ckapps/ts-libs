@@ -11,6 +11,6 @@ import { vectorN, vectorNr } from './vector.types.js';
  * A vector where the value of a component is the sum of the same
  * component of all given `vectors`.
  */
-export function add(...vectors: vectorNr[]): vectorN {
+export function add(vectors: vectorNr[]): vectorN {
   return map(sumAll)(vectors);
 }

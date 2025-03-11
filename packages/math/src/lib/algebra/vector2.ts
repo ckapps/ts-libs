@@ -172,7 +172,7 @@ export declare function equals(a: vec2r, b: vec2r): boolean;
  * A vector with the minimum value for each component from all
  * components of all given `vectors`.
  */
-export declare function min(...vectors: vec2r[]): vec2;
+export declare function min(vectors: vec2r[]): vec2;
 
 /**
  * @param vectors Array of vectors
@@ -181,7 +181,7 @@ export declare function min(...vectors: vec2r[]): vec2;
  * A vector with the maximum value for each component from all
  * components of all given `vectors`.
  */
-export declare function max(...vectors: vec2r[]): vec2;
+export declare function max(vectors: vec2r[]): vec2;
 
 /**
  * Sums all values of the same vector component.
@@ -192,7 +192,7 @@ export declare function max(...vectors: vec2r[]): vec2;
  * A vector where the value of a component is the sum of the same
  * component of all given `vectors`.
  */
-export declare function add(...vectors: vec2r[]): vec2;
+export declare function add(vectors: vec2r[]): vec2;
 
 /**
  * Subtracts all values of the same vector component.
@@ -203,4 +203,4 @@ export declare function add(...vectors: vec2r[]): vec2;
  * A vector where the value of a component is the difference of the same
  * component of all given `vectors`.
  */
-export declare function subtract(...vectors: vec2r[]): vec2;
+export declare function subtract(vectors: vec2r[]): vec2;

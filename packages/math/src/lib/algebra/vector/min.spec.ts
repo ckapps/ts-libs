@@ -28,7 +28,7 @@ describe('algebra/vector/min', () => {
   ];
 
   test.each(cases)('should return %p', (expected, vectors) => {
-    const result = min(...vectors);
+    const result = min(vectors);
     expect(result).toEqual(expected);
   });
 });
