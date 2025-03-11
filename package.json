@@ -2,7 +2,9 @@
   "name": "@cklibs/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "deploy": "nx release --skip-publish"
+  },
   "private": true,
   "dependencies": {
     "effect": "^3.13.10",
