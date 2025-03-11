@@ -1,3 +1,4 @@
+import * as Data from 'effect/Data';
 import * as Fn from 'effect/Function';
 import {
   dotBy,
@@ -7,7 +8,7 @@ import {
 } from '../../algebra/vector/index.js';
 import { vectorNr } from '../../algebra/vector/vector.types.js';
 
-export interface Plane<T extends vectorNr> {
+interface PlaneArgs<T extends vectorNr> {
   /** Any point on the plane */
   readonly point: T;
   /**
@@ -16,6 +17,20 @@ export interface Plane<T extends vectorNr> {
    */
   readonly normal: T;
 }
+
+/**
+ * A euclidean plane.
+ */
+export class Plane<T extends vectorNr> extends Data.TaggedClass(
+  'math/geometry/euclidean/Plane'
+)<PlaneArgs<T>> {}
+
+/**
+ * Creates a new euclidean plane.
+ */
+export const make = <T extends vectorNr>(args: PlaneArgs<T>): Plane<T> => {
+  return new Plane<T>(args);
+};
 
 export enum PlaneSide {
   /** When some point is "on" the plane */
@@ -67,8 +82,8 @@ export function fromDistance(
   normal: vectorNr,
   distanceToOrigin: number
 ): Plane<vectorNr> {
-  return {
+  return make({
     normal,
     point: Fn.pipe(normal, invert, scaleBy(distanceToOrigin)),
-  };
+  });
 }

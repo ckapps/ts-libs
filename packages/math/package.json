@@ -32,6 +32,11 @@
       "import": "./dist/lib/geometry/Sphere.js",
       "default": "./dist/lib/geometry/Sphere.js"
     },
+    "./geometry/euclidean/Plane": {
+      "types": "./dist/lib/geometry/euclidean/Plane.d.ts",
+      "import": "./dist/lib/geometry/euclidean/Plane.js",
+      "default": "./dist/lib/geometry/euclidean/Plane.js"
+    },
     "./geometry/Trigonometry": {
       "types": "./dist/lib/geometry/Trigonometry.d.ts",
       "import": "./dist/lib/geometry/Trigonometry.js",
