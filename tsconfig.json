@@ -14,6 +14,9 @@
     },
     {
       "path": "./packages/cause/cause-effect"
+    },
+    {
+      "path": "./tools/@ckapp/nx-effect"
     }
   ]
 }
