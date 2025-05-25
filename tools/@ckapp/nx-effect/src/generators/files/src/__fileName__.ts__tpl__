@@ -1,0 +1,15 @@
+import { Effect } from 'effect';
+
+class <%= symbolName %> extends Effect.Service<<%= symbolName %>>()('app/<%= symbolName %>', {
+  // Define how to create the service
+  effect: Effect.gen(function* () {
+    Effect.logDebug(`create <%= symbolName %>`);
+
+    const fn = (key: string) =>
+      Effect.succeed(`Value for ${key}`).pipe(Effect.withSpan('<%= symbolName %>.fn'));
+
+    return { fn } as const;
+  }).pipe(Effect.withSpan('<%= symbolName %>.ctor')),
+  // Specify dependencies
+  dependencies: [],
+}) {}

@@ -11,6 +11,9 @@
     },
     {
       "path": "./packages/electron-ext"
+    },
+    {
+      "path": "./tools/@ckapp/nx-effect"
     }
   ]
 }

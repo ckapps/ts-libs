@@ -1,0 +1,14 @@
+import <% if (exportDefault) { %><%= symbolName %><% } else { %>{ <%= symbolName %> }<% } %> from './<%= fileName %>';
+
+describe('<%= symbolName %>', () => {
+  let component: <%= symbolName %>;
+  let fixture: ComponentFixture<<%= symbolName %>>;
+
+  beforeEach(async () => {
+    
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "service": {
+      "factory": "./dist/generators/service",
+      "schema": "./dist/generators/schema.json",
+      "description": "service generator"
+    }
+  }
+}

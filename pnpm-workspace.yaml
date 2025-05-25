@@ -1,5 +1,7 @@
 packages:
   - packages/*
+  - 'packages/*'
+  - 'tools/@ckapp/*'
 onlyBuiltDependencies:
   - '@swc/core'
   - core-js
