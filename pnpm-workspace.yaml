@@ -1,8 +1,9 @@
 packages:
-  - packages/*
+  - 'packages/*'
+  - 'packages/cause/*'
 onlyBuiltDependencies:
   - '@swc/core'
-  - core-js
-  - electron
-  - esbuild
-  - nx
+  - 'core-js'
+  - 'electron'
+  - 'esbuild'
+  - 'nx'

@@ -1,0 +1,20 @@
+{
+  "name": "@ckapp/cause-effect",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/cause/cause-effect/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "packages/cause/cause-effect/dist",
+        "main": "packages/cause/cause-effect/src/index.ts",
+        "tsConfig": "packages/cause/cause-effect/tsconfig.lib.json",
+        "format": ["esm"],
+        "declarationRootDir": "packages/cause/cause-effect/src"
+      }
+    }
+  }
+}
