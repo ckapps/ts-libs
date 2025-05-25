@@ -59,6 +59,27 @@
       "dependsOn": ["^build", "^build"]
     }
   },
+  "generators": {
+    "@nx/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "vitest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nx/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "vitest"
+    },
+    "@nx/angular:component": {
+      "style": "scss"
+    },
+    "@nx/js:library": {
+      "bundler": "none",
+      "setParserOptionsProject": true,
+      "unitTestRunner": "vitest",
+      "useProjectJson": true
+    }
+  },
   "release": {
     "projectsRelationship": "independent",
     "version": {
