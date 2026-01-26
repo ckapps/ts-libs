@@ -1,4 +1,4 @@
-import { subtractAll } from 'src/lib/base/subtract.js';
+import { subtractAll } from '../../base/subtract.js';
 import { map } from '../../fn/array/index.js';
 import { vectorNr } from './vector.types.js';
 
