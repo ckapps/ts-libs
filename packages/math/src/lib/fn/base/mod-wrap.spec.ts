@@ -1,4 +1,4 @@
-import { modWrap } from './mod-wrap';
+import { modWrap } from './mod-wrap.js';
 
 describe('functional/mod-wrap', () => {
   it('should return a function', () => {

@@ -1,4 +1,4 @@
-import { mod } from './mod';
+import { mod } from './mod.js';
 
 describe('functional/mod', () => {
   it('should return a function', () => {

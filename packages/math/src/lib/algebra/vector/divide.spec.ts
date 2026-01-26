@@ -1,4 +1,4 @@
-import { divide } from './divide';
+import { divide } from './divide.js';
 
 describe('algebra/vector/divide', () => {
   const cases: [number, number[]][] = [

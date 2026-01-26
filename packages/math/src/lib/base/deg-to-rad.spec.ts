@@ -1,4 +1,4 @@
-import { degToRad } from './deg-to-rad';
+import { degToRad } from './deg-to-rad.js';
 
 describe('base/deg-to-rad', () => {
   test.each([

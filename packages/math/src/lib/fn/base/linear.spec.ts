@@ -1,4 +1,4 @@
-import { linear } from './linear';
+import { linear } from './linear.js';
 
 describe('functional/linear', () => {
   it('should return a function', () => {

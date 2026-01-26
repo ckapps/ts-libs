@@ -1,4 +1,4 @@
-import { exponential } from './exponential';
+import { exponential } from './exponential.js';
 
 describe('functional/exponential', () => {
   it('should calculate exponential', () => {

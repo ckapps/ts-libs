@@ -1,4 +1,4 @@
-import { nthRoot } from './nth-root';
+import { nthRoot } from './nth-root.js';
 
 describe('functional/nthRoot', () => {
   it('should return nth root', () => {
