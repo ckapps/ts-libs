@@ -1,4 +1,4 @@
-import { invert } from './invert';
+import { invert } from './invert.js';
 
 describe('vector/invert', () => {
   test.each([

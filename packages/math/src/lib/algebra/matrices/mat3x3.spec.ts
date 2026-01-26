@@ -1,4 +1,4 @@
-import * as mat3 from './mat3x3';
+import * as mat3 from './mat3x3.js';
 
 describe('algebra/mat3x3', () => {
   function compare(x: {

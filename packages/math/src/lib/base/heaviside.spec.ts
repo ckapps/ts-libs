@@ -1,4 +1,4 @@
-import { heaviside } from './heaviside';
+import { heaviside } from './heaviside.js';
 
 describe('base/heaviside', () => {
   const negativeValues = [
