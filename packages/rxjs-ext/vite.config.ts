@@ -9,6 +9,7 @@ export default defineConfig(() => ({
   //  plugins: [ nxViteTsPaths() ],
   // },
   test: {
+    name: "@ckapp/rxjs-ext",
     watch: false,
     globals: true,
     environment: 'node',

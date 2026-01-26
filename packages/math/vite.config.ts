@@ -9,6 +9,7 @@ export default defineConfig(() => ({
   //  plugins: [ nxViteTsPaths() ],
   // },
   test: {
+    name: '@ckapp/math',
     watch: false,
     globals: true,
     environment: 'node',
