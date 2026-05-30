@@ -9,7 +9,7 @@ on:
         default: false
         type: boolean
       is-pre:
-        description: 'Release or Pre-Release?'
+        description: 'Release (checked) or Pre-Release (unchecked)?'
         required: true
         default: true
         type: boolean
@@ -20,14 +20,14 @@ on:
         default: 'next'
         options:
         - next
-        - warning
-        - debug
+        - alpha
+        - beta
 
 jobs:
   ### Release steps
   publish:
     name: Publish
-    if: ${{ github.event.inputs.is-pre == false }}
+    if: ${{ github.event.inputs.is-pre == 'false' }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -66,7 +66,7 @@ jobs:
   ### Release steps
   prepublish:
     name: Pre-Publish
-    if: ${{ github.event.inputs.is-pre == true }}
+    if: ${{ github.event.inputs.is-pre == 'true' }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
