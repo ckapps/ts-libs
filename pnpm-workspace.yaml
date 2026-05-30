@@ -6,3 +6,7 @@ onlyBuiltDependencies:
   - electron
   - esbuild
   - nx
+minimumReleaseAgeExclude:
+  - "@ckapp/*"
+trustPolicyExclude:
+  - "@ckapp/*"
