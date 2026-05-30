@@ -9,12 +9,12 @@ on:
         default: false
         type: boolean
       is-pre:
-        description: 'Release (checked) or Pre-Release (unchecked)?'
+        description: 'Is Pre-Release (checked)'
         required: true
         default: true
         type: boolean
       preid:
-        description: 'Prerelease identifier to apply to the version.'
+        description: 'Pre-Release: identifier to apply to the version'
         required: true
         type: choice
         default: 'next'
