@@ -101,7 +101,7 @@ jobs:
           git config --global user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
 
       - name: Create release
-        run: pnpm dlx nx release --skip-publish --preid=${{ github.event.inputs.preid }}
+        run: pnpm dlx nx release --skip-publish --preid=${{ github.event.inputs.preid }} --dry-run=${{ github.event.inputs.dry-run }}
         shell: bash
 
       - name: Publish packages (pre-release)
