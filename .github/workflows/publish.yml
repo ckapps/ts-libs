@@ -8,14 +8,30 @@ on:
         required: false
         default: false
         type: boolean
+      is-pre:
+        description: 'Release or Pre-Release?'
+        required: true
+        default: true
+        type: boolean
+      preid:
+        description: 'Prerelease identifier to apply to the version.'
+        required: true
+        type: choice
+        default: 'next'
+        options:
+        - next
+        - warning
+        - debug
 
 jobs:
+  ### Release steps
   publish:
     name: Publish
+    if: ${{ github.event.inputs.is-pre == false }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      id-token: write # needed for provenance data generation
+      id-token: write  # Required for OIDC
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
@@ -26,7 +42,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           registry-url: https://registry.npmjs.org/
 
       - run: pnpm install --frozen-lockfile
@@ -44,5 +60,52 @@ jobs:
         run: pnpm dlx nx release publish --dry-run=${{ github.event.inputs.dry-run }}
         shell: bash
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
+
+
+  ### Release steps
+  prepublish:
+    name: Pre-Publish
+    if: ${{ github.event.inputs.is-pre == true }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write  # Required for OIDC
+    timeout-minutes: 10
+    env:
+      # NX release needs to have a GH token in env.GITHUB_TOKEN
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org/
+
+      - run: pnpm install --frozen-lockfile
+        shell: bash
+
+      - name: Print Environment Info
+        run: pnpm dlx nx report
+        shell: bash
+
+      - name: Setup git user
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
+
+      - name: Create release
+        run: pnpm dlx nx release --skip-publish --preid=${{ github.event.inputs.preid }}
+        shell: bash
+
+      - name: Publish packages (pre-release)
+        run: pnpm dlx nx release publish --tag=${{ github.event.inputs.preid }} --dry-run=${{ github.event.inputs.dry-run }}
+        shell: bash
+        env:
           NPM_CONFIG_PROVENANCE: true
